@@ -1,18 +1,17 @@
 <?php
 $servername = "localhost";
-$username = "root";  // Replace with your DB username
-$password = "";      // Replace with your DB password
+$username = "root";  
+$password = "";      
 $dbname = "ecommerce";
 
-// Create connection
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Fetch all records from the registration table
 $sql = "SELECT * FROM registration";
 $result = $conn->query($sql);
 
